@@ -1,0 +1,54 @@
+.services {
+  padding: 12rem 0;
+
+  &__content {
+    .cards {
+      margin: 7rem 0;
+      display: flex;
+      column-gap: 2rem;
+      .card {
+        width: 400px;
+        background-color: #fff;
+        box-shadow: 1px 1px 1px 0px rgb(169 169 169 / 13%);
+        border-radius: 15px;
+        padding: 2rem 3rem;
+        &:nth-child(2) {
+          box-shadow: 1px 1px 70px 2px rgb(169 169 169 / 52%);
+        }
+
+        h3 {
+          opacity: 0.9;
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+        img {
+          width: 54px;
+        }
+        &__body {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .services {
+    &__content {
+      .title {
+        text-align: center;
+      }
+      .cards {
+        flex-direction: column;
+        row-gap: 2rem;
+        .card {
+          width: 95%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

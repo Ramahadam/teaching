@@ -1,0 +1,81 @@
+.testimonials {
+  background: linear-gradient(
+    180deg,
+    rgba(62, 193, 211, 0.47) -5.91%,
+    rgba(62, 193, 211, 0) 100%
+  );
+
+  &__content {
+    padding: 10rem 0;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    column-gap: 2rem;
+
+    .card {
+      width: 400px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 1.6rem;
+      padding: 2rem;
+      border-radius: 2.5rem;
+      box-shadow: 1px 1px 70px 2px rgb(169 169 169 / 52%);
+
+      &__header {
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      &__body {
+        p {
+          font-size: 1.35rem;
+          position: relative;
+          &::before,
+          &::after {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 700;
+          }
+          &::before {
+            content: "\f10d";
+            position: absolute;
+            top: -5px;
+            left: -10px;
+          }
+          &::after {
+            content: "\f10e";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+        }
+        cite {
+          color: $secondary;
+          font-size: 1.2rem;
+          margin-top: 2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .testimonials {
+    .cards {
+      flex-direction: column;
+      row-gap: 2rem;
+      .card {
+        width: 365px;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.courses {
+  &__cards {
+    margin: 5rem 0 15rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+
+    .card {
+      width: 30.8rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 1px 1px 1px 0px rgb(169 169 169 / 13%);
+      border-radius: 15px;
+
+      &__head {
+        background-color: #f6f7d78c;
+        padding: 2rem 0;
+        text-align: center;
+        height: 180px;
+        //TODO refactoring the code by using include
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.pen-ruler {
+          background-color: #ecf1f0b5;
+        }
+        &.hyper-text {
+          background-color: rgb(62 193 211 / 24%);
+        }
+        &.cascading {
+          background-color: rgb(255 217 159 / 37%);
+        }
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      &__body {
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          line-height: 1.5;
+          font-size: 1.4rem;
+        }
+        padding: 2rem;
+      }
+      .footer-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+
+        .fa-solid {
+          color: $secondary;
+        }
+        .fa-solid,
+        .fa-regular {
+          font-size: 1.1rem;
+        }
+        .btn-link,
+        .fa-arrow-right {
+          color: $primary;
+        }
+        .btn-link {
+          font-weight: 500;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .courses {
+    &__cards {
+      flex-direction: column;
+      row-gap: 2rem;
+
+      .card {
+        margin: 0 auto;
+      }
+    }
+  }
+}
