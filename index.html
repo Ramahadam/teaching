@@ -12,30 +12,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--OWL carousel-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!--on screen animation-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!--custom css-->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Custom js-->
+    <script defer src="./js/custom.js"></script>
     <title>Professional Teachers|Programming</title>
   </head>
   <body>
-    <section id="hero" class="hero">
-      <div class="hero-content container">
-        <nav>
+    <section id="hero" class="section hero">
+      <div class="container">
+        <nav class="nav">
           <a href="#" class="logo"
             ><img src="./img/logobrand.png" alt="brand logo"
           /></a>
@@ -46,18 +34,41 @@
 
           <ul class="navbar-menu">
             <span class="exitMenu"><i class="fa-solid fa-x"></i> </span>
-            <li><a href="#" class="active"> Home </a></li>
-            <li><a href="#"> Courses </a></li>
-            <li><a href="#"> About </a></li>
-            <li><a href="#"> Contact Us </a></li>
-            <li><a href="#" class="btn btn-white">Login</a></li>
-            <li><a href="#" class="btn btn-primary">Register</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav-link active"> Home </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link" id="courses"> Courses </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link" id="services"> Services </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link" id="testimonials">Testimonials </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link" id="professional"> About Us </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link" id="contact"> Contact Us </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link btn btn-white" id="login">Login</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav-link btn btn-primary" id="register"
+                >Register</a
+              >
+            </li>
+            <li class="nav__item">
+              <span class="dark--mode"><i class="fa-solid fa-moon"></i></span>
+            </li>
           </ul>
         </nav>
 
         <div class="wrapper">
           <div class="wrapper__content">
-            <div class="left-items" data-aos="fade-up">
+            <div class="left-items">
               <div class="widget"><span>Gruntee</span>& certified</div>
               <h1>Art of Programming institute</h1>
               <p>
@@ -76,7 +87,7 @@
                 </div>
               </form>
             </div>
-            <div class="right-items" data-aos="fade-up">
+            <div class="right-items">
               <img
                 src="./img/hero2x.png"
                 alt="illustation image for man holding laptop"
@@ -88,15 +99,52 @@
         </div>
       </div>
     </section>
+    <section class="section login hide section--hidden">
+      <div class="login__content container">
+        <h2>Get in touch with us</h2>
+        <span class="form--close">
+          <i class="fa fa-x"></i>
+        </span>
+        <form action="#" class="form">
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="name" placeholder="Passowrd" />
+          <input type="submit" value="login" class="btn btn--outline" />
+        </form>
+      </div>
+    </section>
 
-    <section class="services">
+    <section class="section register hide section--hidden">
+      <div class="register__content container">
+        <h2>Register to get new tutorials</h2>
+        <span class="form--close__register">
+          <i class="fa fa-x"></i>
+        </span>
+        <div class="wrapper">
+          <img src="./img/register.svg" alt="" />
+          <form action="#" class="form">
+            <input type="text" name="firstname" placeholder="First Name" />
+            <input type="text" name="middlename" placeholder="Middle Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="name" placeholder="Passowrd" />
+            <input type="password" name="name" placeholder="Confirm password" />
+            <input
+              type="submit"
+              value="Submit"
+              class="btn btn--outline btn__register"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="overlay hide"></div>
+    <section class="section services section--hidden">
       <div class="services__content container">
-        <h2 class="title" data-aos="fade-up">Our Services</h2>
-        <p class="description" data-aos="fade-up">
+        <h2 class="title">Our Services</h2>
+        <p class="description">
           It is a long established fact that a reader will be distracted by the
           readable content
         </p>
-        <div class="cards" data-aos="fade-up">
+        <div class="cards">
           <div class="card">
             <img src="./img/alarm-clock.png" alt="alarm-clock" />
             <div class="card-body">
@@ -131,14 +179,14 @@
       </div>
     </section>
 
-    <section class="courses">
+    <section class="section courses section--hidden">
       <div class="courses__content container">
-        <h2 class="title" data-aos="fade-up">Our Services</h2>
-        <p class="description" data-aos="fade-up">
+        <h2 class="title">Our Courses</h2>
+        <p class="description">
           It is a long established fact that a reader will be distracted by the
           readable content
         </p>
-        <div class="courses__cards" data-aos="fade-up">
+        <div class="courses__cards">
           <div class="card">
             <div class="card__head">
               <img src="./img/Saly-27.png" alt="drawing tool" />
@@ -239,15 +287,15 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="section testimonials section--hidden">
       <div class="testimonials__content container">
-        <h2 class="title" data-aos="fade-up">Testimonials</h2>
-        <p class="description" data-aos="fade-up">
+        <h2 class="title">Testimonials</h2>
+        <p class="description">
           What does our students say about us,What does our students say about
           us
         </p>
-        <div class="cards" data-aos="fade-up">
-          <div class="card">
+        <div class="cards slider">
+          <div class="card card--slide">
             <div class="card__header">
               <img src="./img/testimon.jpg" alt="image for person" srcset="" />
             </div>
@@ -260,7 +308,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card card--slide">
             <div class="card__header">
               <img src="./img/testimon1.jpg" alt="image for person" srcset="" />
             </div>
@@ -273,7 +321,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card card--slide">
             <div class="card__header">
               <img src="./img/testimon3.jpg" alt="image for person" srcset="" />
             </div>
@@ -286,18 +334,24 @@
             </div>
           </div>
         </div>
+        <button class="btn btn--outline btn__left">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="btn btn--outline btn__right">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </section>
 
-    <section class="professional">
+    <section class="section professional section--hidden">
       <div class="professional__content container">
-        <h2 class="title" data-aos="fade-up">Our Professional Team</h2>
-        <p class="description" data-aos="fade-up">
+        <h2 class="title">Our Professional Team</h2>
+        <p class="description">
           What does our students say about us,What does our students say about
           us
         </p>
 
-        <div class="cards" data-aos="fade-up">
+        <div class="cards">
           <div class="card">
             <div class="card__head">
               <img src="./img/team1.jpg" alt="drawing tool" />
@@ -370,10 +424,85 @@
       </div>
     </section>
 
-    <!----
-    ------Footer------------->
+    <section class="section enrollment section--hidden">
+      <div class="enrolment__wrapper container">
+        <h2 class="title">Enrollment Procedure</h2>
+        <p class="description">
+          We made learning simply and minimal by using efficient manners
+        </p>
+        <div class="enrollment__tabs">
+          <button
+            class="btn enrollment__tab enrollment__tab--1 enrollment__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>enrollment
+          </button>
+          <button class="btn enrollment__tab enrollment__tab--2" data-tab="2">
+            <span>02</span>Learning
+          </button>
+          <button class="btn enrollment__tab enrollment__tab--3" data-tab="3">
+            <span>03</span>Practising
+          </button>
+        </div>
+        <div class="enrollment__content enrollment__content--2">
+          <h3>Start learning from now ?</h3>
+          <p>
+            Learning dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy s simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy
+          </p>
+        </div>
+        <div class="enrollment__content enrollment__content--3">
+          <h3>Practising is the key to success?</h3>
+          <p>
+            Practising dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy s simply dummy
+            text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy
+          </p>
+        </div>
+        <div
+          class="enrollment__content enrollment__content--1 enrollment__content--active"
+        >
+          <h3>Enrol for free and become graphic designer?</h3>
+          <p>
+            Simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy s simply dummy text of
+            the printing and typesetting industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section contact">
+      <div class="contact__content container">
+        <h2>Get in touch with us</h2>
+        <form action="#" class="form">
+          <input
+            type="text"
+            name="name"
+          
+            placeholder="ex.Mohamed Adam"
+          />
+          <input
+            type="email"
+            name="email"
+            
+            placeholder="e.g mohamed@gmail.com"
+          />
+          <input
+            type="submit"
+            value="Send"
+            id="contactSubmit"
+            class="btn btn--outline"
+          />
+        </form>
+      </div>
+    </section> -->
+    <!-----Footer----------->
     <footer class="footer">
-      <div class="subscription" data-aos="fade-up">
+      <div class="subscription">
         <input
           type="text"
           name="subscribe"
@@ -381,7 +510,7 @@
         />
         <button class="btn">Jion now</button>
       </div>
-      <div class="footer__content container" data-aos="fade-up">
+      <div class="footer__content container">
         <div class="about">
           <h3>Professional</h3>
           <p>
@@ -421,11 +550,5 @@
     <div id="scroll" class="hide">
       <a href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
-    <!--on screen animation-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!--Custom js-->
-    <script src="./js/custom.js"></script>
   </body>
 </html>

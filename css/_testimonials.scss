@@ -7,25 +7,41 @@
 
   &__content {
     padding: 10rem 0;
+    position: relative;
+    .btn__right,
+    .btn__left {
+      position: absolute;
+      bottom: 50%;
+      cursor: pointer;
+    }
+    .btn__right {
+      right: 0;
+      z-index: 10;
+    }
+    .btn__left {
+      left: 0;
+      z-index: 10;
+    }
   }
 
   .cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-    column-gap: 2rem;
-
+    position: relative;
+    width: 50%;
+    height: 20rem;
+    margin: 50px auto;
+    overflow: hidden;
     .card {
-      width: 400px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 15px;
       background-color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
       column-gap: 1.6rem;
-      padding: 2rem;
-      border-radius: 2.5rem;
-      box-shadow: 1px 1px 70px 2px rgb(169 169 169 / 52%);
+      transition: transform 0.8s ease-in;
 
       &__header {
         img {
@@ -71,10 +87,9 @@
 @media screen and (max-width: 968px) {
   .testimonials {
     .cards {
-      flex-direction: column;
-      row-gap: 2rem;
+      width: 100%;
       .card {
-        width: 365px;
+        width: 100%;
       }
     }
   }

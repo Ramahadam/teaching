@@ -51,10 +51,26 @@ h4 {
 .btn-white {
   background-color: #fff;
 }
+.section {
+  transition: transform 1s, opacity 1s;
+  &--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}
 
 .btn-primary {
   background-color: $secondary;
   color: #fff !important;
+}
+.btn-secondary {
+  background-color: $primary;
+  color: #fff !important;
+}
+
+.btn--outline {
+  background-color: #fff;
+  border: 1px solid $secondary;
 }
 
 .description {
@@ -75,4 +91,90 @@ h4 {
 
 h2 {
   text-align: center;
+}
+h3 {
+  opacity: 0.9;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.4rem;
+}
+
+.section {
+  padding: 12rem 0;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/********** Mxins *******************/
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin flex__sp--between {
+  justify-content: space-between;
+}
+
+@mixin flex__ct--center {
+  justify-content: center;
+}
+
+@mixin grid {
+  display: grid;
+}
+@mixin grid__sp--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 0px rgb(169 169 169 / 13%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.form {
+  @include flex();
+  flex-direction: column;
+
+  input {
+    margin: 0.5rem 0;
+    width: 100%;
+
+    &:not(:last-child) {
+      color: rgb(69, 69, 69);
+      padding: 1.5rem 1rem;
+      outline: none;
+      border: none;
+      margin-bottom: 0.5rem;
+      border-radius: 20px;
+      border: 1px solid rgb(183, 183, 183);
+    }
+    &:focus {
+      box-shadow: 0 1px 1px 1px $secondary;
+      border: none;
+    }
+    &:last-child {
+      color: $secondary;
+      width: 100px;
+      padding: 1.3rem 2rem;
+      margin: 1rem auto 0;
+      cursor: pointer;
+      transition: background 300ms ease-in-out;
+      &:hover {
+        background: $secondary;
+        color: #fff;
+      }
+    }
+    &::placeholder {
+      font-size: 13px;
+      opacity: 0.5;
+    }
+  }
 }
