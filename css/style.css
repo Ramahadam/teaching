@@ -464,7 +464,6 @@ p {
   background: linear-gradient(180deg, rgba(62, 193, 211, 0.47) -5.91%, rgba(62, 193, 211, 0) 100%);
 }
 .testimonials__content {
-  padding: 10rem 0;
   position: relative;
 }
 .testimonials__content .btn__right,
@@ -474,33 +473,38 @@ p {
   cursor: pointer;
 }
 .testimonials__content .btn__right {
-  right: 0;
+  right: 6%;
   z-index: 10;
 }
 .testimonials__content .btn__left {
-  left: 0;
+  left: 6%;
   z-index: 10;
 }
 .testimonials .cards {
   position: relative;
-  width: 50%;
+  width: 70%;
   height: 20rem;
   margin: 50px auto;
   overflow: hidden;
+}
+.testimonials .cards article {
+  width: 400px;
 }
 .testimonials .cards .card {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 2rem;
-  border-radius: 15px;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  -moz-column-gap: 1.6rem;
-       column-gap: 1.6rem;
-  transition: transform 0.8s ease-in;
+  transition: transform 1s ease;
+  background: transparent;
+  box-shadow: none;
+}
+.testimonials .cards .card blockquote {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.testimonials .cards .card__header {
+  text-align: center;
 }
 .testimonials .cards .card__header img {
   width: 70px;
@@ -540,9 +544,6 @@ p {
   .testimonials .cards {
     width: 100%;
   }
-  .testimonials .cards .card {
-    width: 100%;
-  }
 }
 .professional {
   margin: 8rem 0;
@@ -554,7 +555,7 @@ p {
   gap: 3rem;
 }
 .professional .cards .card {
-  width: 200px;
+  width: 90%;
   background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
@@ -570,8 +571,8 @@ p {
   margin-bottom: 1rem;
 }
 .professional .cards img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
@@ -779,6 +780,23 @@ p {
   background-color: rgba(11, 11, 11, 0.664);
 }
 
+@media screen and (max-width: 968px) {
+  .register {
+    width: 90%;
+  }
+  .register .wrapper {
+    flex-direction: column;
+  }
+  .register .wrapper img {
+    display: none;
+  }
+  .register .wrapper .form {
+    width: 90%;
+  }
+  .login {
+    width: 90%;
+  }
+}
 .enrollment {
   width: 70%;
   padding: 12rem 0;
@@ -794,6 +812,7 @@ p {
 }
 .enrollment__tab {
   cursor: pointer;
+  transition: transform 1s ease;
   font-size: 1.7rem;
 }
 .enrollment__tab span {
@@ -816,10 +835,10 @@ p {
   background-color: #fff;
   padding: 3rem;
   margin-top: -2rem;
-  height: 200px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px rgb(222, 222, 222);
   display: none;
+  overflow: hidden;
 }
 .enrollment__content h3 {
   line-height: 1.5;

@@ -11,6 +11,7 @@
   }
   &__tab {
     cursor: pointer;
+    transition: transform 1s ease;
     font-size: 1.7rem;
     span {
       display: inline-block;
@@ -35,10 +36,10 @@
     background-color: #fff;
     padding: 3rem;
     margin-top: -2rem;
-    height: 200px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px 1px rgb(222, 222, 222);
     display: none;
+    overflow: hidden;
     h3 {
       line-height: 1.5;
     }

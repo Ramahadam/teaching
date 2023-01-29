@@ -21,7 +21,7 @@
     <title>Professional Teachers|Programming</title>
   </head>
   <body>
-    <section id="hero" class="section hero">
+    <section class="section hero">
       <div class="container">
         <nav class="nav">
           <a href="#" class="logo"
@@ -35,7 +35,7 @@
           <ul class="navbar-menu">
             <span class="exitMenu"><i class="fa-solid fa-x"></i> </span>
             <li class="nav__item">
-              <a href="#" class="nav-link active"> Home </a>
+              <a href="#" class="nav-link active" id="hero"> Home </a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav-link" id="courses"> Courses </a>
@@ -49,9 +49,9 @@
             <li class="nav__item">
               <a href="#" class="nav-link" id="professional"> About Us </a>
             </li>
-            <li class="nav__item">
+            <!-- <li class="nav__item">
               <a href="#" class="nav-link" id="contact"> Contact Us </a>
-            </li>
+            </li> -->
             <li class="nav__item">
               <a href="#" class="nav-link btn btn-white" id="login">Login</a>
             </li>
@@ -296,42 +296,50 @@
         </p>
         <div class="cards slider">
           <div class="card card--slide">
-            <div class="card__header">
-              <img src="./img/testimon.jpg" alt="image for person" srcset="" />
-            </div>
-            <div class="card__body">
-              <p>
-                &nbsp; What does our students say about us,What does our
-                students say
-              </p>
-              <cite>Peter Doe</cite>
-            </div>
+            <blockquote>
+              <div class="card__header">
+                <img
+                  src="./img/testimon1.jpg"
+                  alt="image for person"
+                  srcset=""
+                />
+              </div>
+              <div class="card__body">
+                <p>
+                  &nbsp; Quisquam itaque deserunt ullam, quia ea repellendus
+                  provident, ducimus neque ipsam modi voluptatibus doloremque,
+                  corrupti laborum. Incidunt numquam perferendis veritatis neque
+                  repellendus. Lorem, ipsum dolor sit amet consectetur
+                  adipisicing elit. Illo deserunt exercitationem deleniti.
+                </p>
+                <cite>Jhon Matip</cite>
+              </div>
+            </blockquote>
           </div>
 
           <div class="card card--slide">
-            <div class="card__header">
-              <img src="./img/testimon1.jpg" alt="image for person" srcset="" />
-            </div>
-            <div class="card__body">
-              <p>
-                &nbsp; What does our students say about us,What does our
-                students say
-              </p>
-              <cite>Jhon Matip</cite>
-            </div>
-          </div>
+            <blockquote>
+              <div class="card__header">
+                <img
+                  src="./img/testimon3.jpg"
+                  alt="image for person"
+                  srcset=""
+                />
+              </div>
 
-          <div class="card card--slide">
-            <div class="card__header">
-              <img src="./img/testimon3.jpg" alt="image for person" srcset="" />
-            </div>
-            <div class="card__body">
-              <p>
-                &nbsp; What does our students say about us,What does our
-                students say
-              </p>
-              <cite>Ana Mk</cite>
-            </div>
+              <div class="card__body">
+                <p>
+                  &nbsp; Quisquam itaque deserunt ullam, quia ea repellendus
+                  provident, ducimus neque ipsam modi voluptatibus doloremque,
+                  corrupti laborum. Incidunt numquam perferendis veritatis neque
+                  repellendus. Lorem, ipsum dolor sit amet consectetur
+                  adipisicing elit. Illo deserunt exercitationem deleniti.     What
+                  does our students say about us,What does our students say What
+                  does our students say about us,What does our students say
+                </p>
+                <cite>Ana Mk</cite>
+              </div>
+            </blockquote>
           </div>
         </div>
         <button class="btn btn--outline btn__left">
@@ -356,7 +364,6 @@
             <div class="card__head">
               <img src="./img/team1.jpg" alt="drawing tool" />
             </div>
-
             <div class="card__body">
               <h3>William Smith</h3>
               <p>Backend developer</p>
@@ -548,7 +555,7 @@
     </footer>
 
     <div id="scroll" class="hide">
-      <a href="#hero"><i class="fa-solid fa-arrow-up"></i></a>
+      <a href="#" class="nav-link"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </body>
 </html>

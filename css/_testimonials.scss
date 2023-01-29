@@ -6,7 +6,6 @@
   );
 
   &__content {
-    padding: 10rem 0;
     position: relative;
     .btn__right,
     .btn__left {
@@ -15,35 +14,41 @@
       cursor: pointer;
     }
     .btn__right {
-      right: 0;
+      right: 6%;
       z-index: 10;
     }
     .btn__left {
-      left: 0;
+      left: 6%;
       z-index: 10;
     }
   }
 
   .cards {
     position: relative;
-    width: 50%;
+    width: 70%;
     height: 20rem;
     margin: 50px auto;
     overflow: hidden;
+
+    article {
+      width: 400px;
+    }
+
     .card {
       position: absolute;
       top: 0;
       width: 100%;
-      padding: 2rem;
-      border-radius: 15px;
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      column-gap: 1.6rem;
-      transition: transform 0.8s ease-in;
+      transition: transform 1s ease;
+      background: transparent;
+      box-shadow: none;
+      blockquote {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+      }
 
       &__header {
+        text-align: center;
         img {
           width: 70px;
           height: 70px;
@@ -88,9 +93,6 @@
   .testimonials {
     .cards {
       width: 100%;
-      .card {
-        width: 100%;
-      }
     }
   }
 }

@@ -5,10 +5,6 @@ const exitMenu = document.querySelector(".exitMenu");
 const enrlTabsContainer = document.querySelector(".enrollment__tabs");
 const enrlContents = document.querySelectorAll(".enrollment__content");
 const enrlTabsBtn = document.querySelectorAll(".enrollment__tab");
-const btnCourses = document.getElementById("courses");
-const btnServices = document.getElementById("services");
-const btnTestimon = document.getElementById("testimonials");
-const btnProfession = document.getElementById("professional");
 const login = document.querySelector(".login");
 const register = document.querySelector(".register");
 const formClose = document.querySelector(".form--close");
@@ -16,10 +12,7 @@ const formCloseRegister = document.querySelector(".form--close__register");
 const overlay = document.querySelector(".overlay");
 const links = document.querySelectorAll(".nav-link");
 const nav = document.querySelector(".nav");
-const section1 = document.querySelector(".services");
-const hero = document.getElementById("hero");
-const btnLogin = document.getElementById("login");
-const btnRegister = document.getElementById("register");
+const hero = document.querySelector(".hero");
 const slides = document.querySelectorAll(".card--slide");
 const slider = document.querySelector(".slider");
 const btnRight = document.querySelector(".btn__right");
@@ -66,13 +59,18 @@ document.querySelector(".navbar-menu").addEventListener("click", function (e) {
     if (section == "login") {
       login.classList.toggle("show");
       overlay.classList.toggle("show");
+      navigationMenu.classList.toggle("show");
     } else if (section == "register") {
       register.classList.toggle("show");
       overlay.classList.toggle("show");
-    } else
+      navigationMenu.classList.toggle("show");
+    } else {
       document
         .querySelector(`.${section}`)
         .scrollIntoView({ behavior: "smooth" });
+      //Hide the mobile menu
+      this.classList.toggle("show");
+    }
   }
 });
 
